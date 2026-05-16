@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+.venv/
+env/
+.env
+
+# Lambda packaging
+lambda_package/
+*.zip
+
+# SAM build artifacts
+.aws-sam/
+
+# AWS
+.aws/
+
+# Secrets and local notes — never commit
+notes.txt
+output.json
+aws
+
+# Claude Code session files
+.claude/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# macOS
+.DS_Store

@@ -1,0 +1,218 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: EngagementBot — automated narrative content pipeline for Facebook
+
+# Secrets (API keys, tokens) are stored in SSM Parameter Store.
+# Run scripts/setup-secrets.sh before your first deploy to create them.
+
+Parameters:
+  FacebookPageId:
+    Type: String
+    Description: Facebook Page numeric ID (not the @username)
+
+  AlertEmail:
+    Type: String
+    Description: Email address to receive error notifications
+
+  DynamoDBTableName:
+    Type: String
+    Default: "engagement-bot-stories"
+    Description: DynamoDB table name for story and block state
+
+  ScheduleCron:
+    Type: String
+    Default: "cron(0 18,2 ? * * *)"
+    Description: >
+      EventBridge Scheduler cron expression (UTC).
+      Current: daily at 18:00 UTC and 02:00 UTC.
+      Format: cron(minutes hours day-of-month month day-of-week year)
+
+  DryRun:
+    Type: String
+    Default: "false"
+    AllowedValues: ["true", "false"]
+    Description: Set to true to generate content but skip posting (useful for smoke tests)
+
+Globals:
+  Function:
+    Runtime: python3.12
+    Timeout: 900      # 15 min — image generation can be slow
+    MemorySize: 1024
+    Architectures: [x86_64]
+
+Resources:
+
+  # ── DynamoDB: stories table ───────────────────────────────────────────────
+  # PK: story_id (S), SK: sk (S)
+  # SK values: "STORY#META", "BLOCK#001", "BLOCK#002", ..., "SYSTEM" items (CONFIG, LOCK)
+  # GSI: StatusCreatedAtIndex — query stories by status, sorted by creation date
+  StoriesTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Ref DynamoDBTableName
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: story_id
+          AttributeType: S
+        - AttributeName: sk
+          AttributeType: S
+        - AttributeName: story_status
+          AttributeType: S
+        - AttributeName: created_at
+          AttributeType: S
+      KeySchema:
+        - AttributeName: story_id
+          KeyType: HASH
+        - AttributeName: sk
+          KeyType: RANGE
+      GlobalSecondaryIndexes:
+        - IndexName: StatusCreatedAtIndex
+          KeySchema:
+            - AttributeName: story_status
+              KeyType: HASH
+            - AttributeName: created_at
+              KeyType: RANGE
+          Projection:
+            ProjectionType: KEYS_ONLY
+
+  # ── IAM: Lambda execution role ────────────────────────────────────────────
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "${AWS::StackName}-lambda-role"
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: DynamoDBStoryAccess
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - dynamodb:GetItem
+                  - dynamodb:PutItem
+                  - dynamodb:UpdateItem
+                  - dynamodb:DeleteItem
+                  - dynamodb:Query
+                Resource:
+                  - !GetAtt StoriesTable.Arn
+                  - !Sub "${StoriesTable.Arn}/index/StatusCreatedAtIndex"
+              - Effect: Allow
+                Action: ssm:GetParameter
+                Resource: !Sub "arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/engagement-bot/*"
+
+  # ── Lambda function ───────────────────────────────────────────────────────
+  EngagementFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub "${AWS::StackName}-engagement"
+      Handler: handler.lambda_handler
+      CodeUri: src/
+      Role: !GetAtt LambdaExecutionRole.Arn
+      Environment:
+        Variables:
+          DDB_TABLE: !Ref DynamoDBTableName
+          FACEBOOK_PAGE_ID: !Ref FacebookPageId
+          DRY_RUN: !Ref DryRun
+          # SSM parameter paths — secrets are fetched at runtime using these paths.
+          # Run scripts/setup-secrets.sh to create the SecureString parameters first.
+          SSM_OPENAI_API_KEY: /engagement-bot/openai-api-key
+          SSM_GOOGLE_API_KEY: /engagement-bot/google-api-key
+          SSM_FACEBOOK_TOKEN: /engagement-bot/facebook-page-access-token
+
+  # ── CloudWatch Logs ───────────────────────────────────────────────────────
+  LambdaLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "/aws/lambda/${AWS::StackName}-engagement"
+      RetentionInDays: 30
+
+  # ── SNS + CloudWatch Alarm for error alerts ───────────────────────────────
+  AlertTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: !Sub "${AWS::StackName}-alerts"
+
+  AlertEmailSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      TopicArn: !Ref AlertTopic
+      Protocol: email
+      Endpoint: !Ref AlertEmail
+      # NOTE: AWS will send a confirmation email — you must click it before alerts fire.
+
+  ErrorAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub "${AWS::StackName}-lambda-errors"
+      AlarmDescription: Fires when the Lambda function throws an error
+      Namespace: AWS/Lambda
+      MetricName: Errors
+      Dimensions:
+        - Name: FunctionName
+          Value: !Sub "${AWS::StackName}-engagement"
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 1
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: notBreaching
+      AlarmActions:
+        - !Ref AlertTopic
+
+  # ── IAM: EventBridge Scheduler execution role ─────────────────────────────
+  SchedulerExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "${AWS::StackName}-scheduler-role"
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: scheduler.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: InvokeLambda
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action: lambda:InvokeFunction
+                Resource: !GetAtt EngagementFunction.Arn
+
+  # ── EventBridge Scheduler ─────────────────────────────────────────────────
+  PostingSchedule:
+    Type: AWS::Scheduler::Schedule
+    Properties:
+      Name: !Sub "${AWS::StackName}-posting-schedule"
+      Description: Triggers the EngagementBot Lambda on the configured cron
+      ScheduleExpression: !Ref ScheduleCron
+      ScheduleExpressionTimezone: UTC
+      FlexibleTimeWindow:
+        Mode: "OFF"             # fire exactly at the scheduled time
+      State: ENABLED
+      Target:
+        Arn: !GetAtt EngagementFunction.Arn
+        RoleArn: !GetAtt SchedulerExecutionRole.Arn
+
+Outputs:
+  FunctionName:
+    Description: Lambda function name
+    Value: !Sub "${AWS::StackName}-engagement"
+  StoriesTable:
+    Description: DynamoDB table for story and block state
+    Value: !Ref DynamoDBTableName
+  LogGroup:
+    Description: CloudWatch log group
+    Value: !Sub "/aws/lambda/${AWS::StackName}-engagement"
+  AlertTopicArn:
+    Description: SNS topic ARN for error alerts
+    Value: !Ref AlertTopic

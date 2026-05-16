@@ -1,0 +1,27 @@
+# SAM deployment configuration.
+# Build: sam build
+# Deploy: sam deploy
+# Build + deploy: sam build && sam deploy
+
+version = 0.1
+
+[default.deploy.parameters]
+stack_name             = "engagement-bot"
+region                 = "us-west-2"
+capabilities           = "CAPABILITY_NAMED_IAM"
+s3_bucket              = "engagement-bot-bucket"     # SAM uploads Lambda package here before deploy
+s3_prefix              = "sam-artifacts"
+resolve_s3             = false
+
+# Non-secret parameters. Secrets are in SSM — see scripts/setup-secrets.sh.
+parameter_overrides    = [
+  "DynamoDBTableName=engagement-bot-stories",
+  "FacebookPageId=61589988297042",
+  "AlertEmail=joshmerrell.engagement@gmail.com",
+  "DryRun=false",
+]
+# ScheduleCron is NOT passed here — SAM parameter parsing splits on spaces, breaking cron expressions.
+# To change the schedule, update the ScheduleCron Default in template.yaml and redeploy.
+
+confirm_changeset      = true
+fail_on_empty_changeset = false

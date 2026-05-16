@@ -1,0 +1,16 @@
+# EngagementBot — Runtime Configuration
+# Apply changes by running: python3 scripts/import-config.py
+
+llm:
+  model: gpt-4o             # OpenAI model to use for caption + image prompt generation
+  temperature: 0.8          # Creativity (0.0 = deterministic, 1.0 = very creative)
+  max_tokens: 1000          # Max response length
+
+images:
+  model: gemini-3.1-flash-image-preview  # Gemini image generation model
+                            # Paid alternative: imagen-3.0-generate-002
+  count: 3                 # Default number of carousel images per post
+  aspect_ratio: "4:5"       # Image aspect ratio; 4:5 is portrait (recommended for Facebook feed)
+                            # Note: aspect ratio is passed as a prompt hint with Gemini models
+  style: null               # Default image style/mood applied to all blocks; null = no default
+                            # Example: "painterly, dark fantasy, cinematic lighting"

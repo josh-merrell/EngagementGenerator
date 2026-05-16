@@ -1,0 +1,6 @@
+# Root requirements for local development.
+# Lambda dependencies (also used by sam build via src/requirements.txt):
+-r src/requirements.txt
+
+# Local-only dependencies (not bundled with Lambda):
+pyyaml>=6.0       # used by import-story.py and import-config.py to read local YAML files

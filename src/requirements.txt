@@ -1,0 +1,6 @@
+openai>=1.0.0
+boto3>=1.34.0
+requests>=2.31.0
+
+# Google Gemini image generation
+google-genai>=1.0.0
