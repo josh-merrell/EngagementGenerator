@@ -36,7 +36,7 @@ Apply consistently across all images unless a story-specific override is active:
 ### Scene-level rules
 
 - The female protagonist, when present, should often appear **small against overwhelming environments** — scale contrast communicates emotional vulnerability and the immensity of the supernatural world around her.
-- Favor **back-view, silhouette, and partial-profile** compositions over direct full-face portraiture. This invites reader projection and avoids over-defining the character.
+- Favor **back-view and silhouette** compositions exclusively. Never use profile, three-quarter view, or any angle that reveals facial features. This invites reader projection and avoids over-defining the character.
 - The male figure, when present, should feel **composed, shadowed, and restrained** — never posed, flirtatious, or performative.
 - Use **depth layering**: a point of intimacy or tension in the foreground, something vast or ominous in the background.
 - Threshold compositions work well: a character standing at a doorway, a cave mouth, the edge of water, a dark corridor ahead.
@@ -73,17 +73,17 @@ Always include the following in every prompt:
 - Flowing, slightly distressed fabrics — thin shift, dark silk, torn hem, flowing cloak
 - **Always attractive and physically desirable.** Slender, feminine figure with curves. Use prompt language such as: "elegant figure", "graceful feminine silhouette", "slender waist", "soft curves". The physical presentation should feel aspirational and seductive without being explicit.
 - Posture suggesting emotional states: drawn forward toward something, hesitating at a threshold, kneeling, reaching upward, or transfixed
-- **Permitted compositions:** back to viewer, back-of-head silhouette, full figure from behind, partial figure where framing cuts above the mouth. Hair, shoulders, hands, and lower body are all acceptable focal points.
-- **No faces — ever.** Do not show any character's eyes, nose, or upper face. The mouth and below is the upper limit of facial visibility. Enforce this with explicit prompt language: "figure seen from behind", "no face visible", "back to viewer", "face obscured", "figure in silhouette".
+- **Permitted compositions:** back to viewer, back-of-head silhouette, full figure from behind, figure in silhouette. Acceptable focal points: hair, shoulders, hands, lower body, fabric, and symbolic objects. Never frame a shot in a way that would require showing any part of the face.
+- **No faces — ever.** Do not show any part of a character's face. Enforce this with explicit prompt language: "figure seen from behind", "no face visible", "back to viewer", "face entirely obscured", "figure in silhouette".
 
 ### Male love interest (when present)
 
 - Restrained, shadowed, composed — the danger is in the stillness, not any obvious action
 - Ancient quality — worn elegance, timeless quality, something that suggests centuries rather than decades
-- Energy: terrifying composure, emotional fixation barely visible beneath surface stillness
+- Energy: terrifying composure conveyed entirely through posture and stillness — weight of presence, not movement
 - **Always attractive and physically imposing.** Tall, strong, well-built figure — the physical presence should feel magnetic and overwhelming without being cartoonish. Use prompt language such as: "tall imposing masculine figure", "broad shoulders", "powerful build", "commanding presence".
-- **No faces — ever.** Same rule applies as the female protagonist. Show hands, silhouette, clothing, posture, and presence — not the face. Use: "face in shadow", "figure seen from behind", "obscured by darkness", "below the jaw only".
-- Avoid: any composition that would require showing eyes or upper facial features
+- **No faces — ever.** Same rule applies as the female protagonist. Show hands, silhouette, clothing, posture, and presence — not the face. Use: "face entirely in shadow", "figure seen from behind", "obscured by darkness", "no face visible".
+- Avoid: any composition that would require showing any part of the face
 
 ---
 
@@ -97,7 +97,7 @@ Always instruct away from:
 - Bright daylight, summer settings, warm cheerful color palettes
 - Text, logos, symbols, or overlays within the image
 - Overtly sexual or explicit posing — seductive and emotionally charged is the target, not explicit
-- **Any facial features above the mouth** — no eyes, no nose, no upper face on any character. This is a hard rule. Always include "no faces visible", "figures seen from behind", or "face obscured" in prompts that include human figures.
+- **Any part of a character's face** — no eyes, nose, mouth, chin, or any facial feature on any character. This is a hard rule. Always include "no face visible", "figures seen from behind", or "face entirely obscured" in every prompt that includes a human figure.
 - Modern environments, modern clothing, contemporary visual cues
 
 ---

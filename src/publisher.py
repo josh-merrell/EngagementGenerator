@@ -91,11 +91,15 @@ def upload_photo(image_path: str, page_id: str, access_token: str) -> str:
             logger.info("Retrying in %ds...", _RETRY_DELAY)
             time.sleep(_RETRY_DELAY)
 
+    fb_error = resp.text[:500] if not last_exc else str(last_exc)
     logger.error(
-        "upload_photo failed after %d attempts — path=%s last_error=%s",
-        _MAX_RETRIES, image_path, last_exc or resp.text[:200],
+        "upload_photo failed after %d attempts — path=%s facebook_error=%s",
+        _MAX_RETRIES, image_path, fb_error,
     )
-    resp.raise_for_status()
+    raise requests.HTTPError(
+        f"Facebook API error uploading photo {image_path}: {fb_error}",
+        response=resp if not last_exc else None,
+    )
 
 
 def create_post(
@@ -105,21 +109,27 @@ def create_post(
     access_token: str,
 ) -> str:
     """Create a carousel post with the given attached media. Returns the post ID."""
-    url = f"{GRAPH_BASE}/me/feed"
-    attached = json.dumps([{"media_fbid": fbid} for fbid in media_fbids])
+    url = f"{GRAPH_BASE}/{page_id}/feed"
 
     logger.info(
         "create_post: page_id=%s media_fbids=%s caption_len=%d",
         page_id, media_fbids, len(caption),
     )
-    logger.debug("create_post attached_media JSON: %s", attached)
     logger.debug("create_post caption preview: %s", caption[:200])
 
-    payload = {
-        "message": caption,
-        "attached_media": attached,
-        "access_token": access_token,
-    }
+    # Build payload as a list of tuples so attached_media uses indexed array
+    # parameters (attached_media[0]=..., attached_media[1]=...) which Facebook
+    # parses reliably. A single JSON-string value is accepted but silently drops
+    # the attachments, producing a text-only post.
+    payload = [
+        ("message", caption),
+        ("published", "true"),
+        ("access_token", access_token),
+    ]
+    for i, fbid in enumerate(media_fbids):
+        payload.append((f"attached_media[{i}]", json.dumps({"media_fbid": fbid})))
+
+    logger.debug("create_post payload fields: %s", [k for k, _ in payload])
 
     last_resp = None
     for attempt in range(1, _MAX_RETRIES + 1):
@@ -154,8 +164,12 @@ def create_post(
             logger.info("Retrying in %ds...", _RETRY_DELAY)
             time.sleep(_RETRY_DELAY)
 
+    fb_error = last_resp.text[:500] if last_resp else "no response"
     logger.error(
-        "create_post failed after %d attempts — page_id=%s last_response=%s",
-        _MAX_RETRIES, page_id, last_resp.text[:300] if last_resp else "no response",
+        "create_post failed after %d attempts — page_id=%s facebook_error=%s",
+        _MAX_RETRIES, page_id, fb_error,
     )
-    last_resp.raise_for_status()
+    raise requests.HTTPError(
+        f"Facebook API error posting to page {page_id}: {fb_error}",
+        response=last_resp,
+    )

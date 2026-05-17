@@ -142,9 +142,9 @@ characters: |
   as menacing; describe him as certain.
   Visual: Tall imposing masculine figure, dark formal attire with silver details,
   iron-gray hair worn short. Moves with unnatural stillness. Always show in
-  shadow or from behind — no eyes or upper face. Prompt language: "tall figure
+  deep shadow or from behind — no face visible. Prompt language: "tall figure
   in dark formal attire", "commanding presence in shadow", "broad-shouldered
-  silhouette, face obscured".
+  silhouette, face entirely obscured".
 ```
 
 > **Characters are story-level, not block-level.** Define them once on the `project:` section. The same definitions are injected into every block's prompt automatically.
@@ -171,6 +171,11 @@ The `template` is your episode brief. The LLM uses it — plus the story `title`
 - Image style/mood (use `image_style`)
 - Explicit format or length instructions (use `caption_notes`)
 - Prior episode recaps — the Lambda reads completed blocks for continuity automatically
+
+**Hard rule — never include in Key visuals or anywhere in the template:**
+
+- **Facial features or expressions of any kind.** Do not describe a character's face, eyes, gaze, mouth, lips, expression, or any other facial attribute. The image styling guide enforces a strict no-face rule across all generated images. Facial descriptions in the template will cause the LLM to generate image prompts that violate this rule, producing unusable output.
+- Instead, direct emotional weight entirely through **posture, body language, hands, clothing, and environment.** A character "standing rigid at the threshold" conveys dread. "Her hand at her side, fingers half-curled" conveys restraint. "His silhouette filling the doorway, unmoving" conveys threat. These are the tools — not the face.
 
 **Strong template example:**
 

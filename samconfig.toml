@@ -16,7 +16,7 @@ resolve_s3             = false
 # Non-secret parameters. Secrets are in SSM — see scripts/setup-secrets.sh.
 parameter_overrides    = [
   "DynamoDBTableName=engagement-bot-stories",
-  "FacebookPageId=61589988297042",
+  "FacebookPageId=1077987482069679",
   "AlertEmail=joshmerrell.engagement@gmail.com",
   "DryRun=false",
 ]
