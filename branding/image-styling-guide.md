@@ -85,6 +85,34 @@ Always include the following in every prompt:
 - **No faces — ever.** Same rule applies as the female protagonist. Show hands, silhouette, clothing, posture, and presence — not the face. Use: "face entirely in shadow", "figure seen from behind", "obscured by darkness", "no face visible".
 - Avoid: any composition that would require showing any part of the face
 
+### Permitted and prohibited body exposure
+
+A hard rule. Applies to every image, every story, no exceptions. Stories may not override this.
+
+**Never visible on any character — male or female:**
+- Genitalia of any kind
+- Nipples or areolae
+- Any anatomically explicit framing of crotch, groin, or pelvic detail
+- Any depiction that could read as pornographic, clinical, or below the brand's prestige register
+
+**Permitted on the male love interest:**
+- Bare torso, chest, abdomen, shoulders, arms, and back where the scene calls for it
+- Skin must be rendered painterly and atmospheric — chest in shadow, lighting falling across the form, framing, oblique angle, partial drapery, or oil-painted abstraction
+- A bare male torso is welcome in intimate or atmospheric scenes;
+
+**Permitted on the female protagonist:**
+- Bare shoulders, including one or both shoulders exposed by slipped fabric
+- Bare upper back and full back
+- Cleavage — the line and curve of the breast suggested by slipped, parted, or low-cut fabric, **never the nipple**
+- Bare arms
+- Bare legs and thighs where flowing fabric, a slit, or composition calls for it, tastefully framed
+- The line of the waist and hip when partially exposed by parted garment or slipped fabric
+
+**How to enforce in prompts:**
+Append explicit exclusionary language to every prompt that involves visible skin. Recommended phrasing to include in the prompt body or trailing exclusions: "no nipples visible, no genitalia, breast covered or in deep shadow, lower body covered, tastefully framed, painterly skin rendering without anatomical detail."
+
+The brand target is unchanged: seductive, suggestive, emotionally charged. Never explicit or pornographic.
+
 ---
 
 ## What to Exclude from Every Prompt
@@ -96,7 +124,7 @@ Always instruct away from:
 - Generic fantasy imagery: distant castles, ravens everywhere, medieval armor, dragons, stock vampire tropes
 - Bright daylight, summer settings, warm cheerful color palettes
 - Text, logos, symbols, or overlays within the image
-- Overtly sexual or explicit posing — seductive and emotionally charged is the target, not explicit
+- Overtly sexual or explicit posing — seductive and emotionally charged is the target, not explicit. See **Permitted and prohibited body exposure** above for the hard rule on nudity, genitalia, and nipples (the rule applies to every image in every story).
 - **Any part of a character's face** — no eyes, nose, mouth, chin, or any facial feature on any character. This is a hard rule. Always include "no face visible", "figures seen from behind", or "face entirely obscured" in every prompt that includes a human figure.
 - Modern environments, modern clothing, contemporary visual cues
 

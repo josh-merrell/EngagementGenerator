@@ -72,11 +72,10 @@ def generate_content(
     """
     llm_cfg = config["llm"]
     logger.info(
-        "generate_content: block_id=%d model=%s temperature=%s max_tokens=%s prior_blocks=%d",
+        "generate_content: block_id=%d model=%s max_tokens=%s prior_blocks=%d",
         block["id"],
         llm_cfg.get("model"),
-        llm_cfg.get("temperature", 0.8),
-        llm_cfg.get("max_tokens", 1000),
+        llm_cfg.get("max_tokens", 2500),
         len(prior_blocks),
     )
 
@@ -93,8 +92,7 @@ def generate_content(
     try:
         response = _get_client().chat.completions.create(
             model=llm_cfg["model"],
-            temperature=llm_cfg.get("temperature", 0.8),
-            max_tokens=llm_cfg.get("max_tokens", 1000),
+            max_completion_tokens=llm_cfg.get("max_tokens", 2500),
             response_format={"type": "json_object"},
             messages=messages,
         )

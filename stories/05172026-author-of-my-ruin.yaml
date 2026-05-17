@@ -1,0 +1,607 @@
+project:
+  title: "Author of My Ruin"
+  description: >
+    A nine-part contemporary dark romance arc. An ordinary midwestern woman, Hannah Cole,
+    obsessed with a bestselling gothic romantasy series, attends the local stop of the
+    author's national tour. The author's brooding assistant — who introduces himself only
+    as "Vale" — picks her out of the line, offers her a two-week "continuity reader"
+    engagement on the unreleased final book, and pulls her into the tour. As she descends
+    into the manuscript she begins to recognize herself on the page: a shirt she once
+    wore, a typo from a private fan post, a journal line she never shared. The truth
+    arrives in stages — there is no assistant. Vale is A. V. Marrow. The author has been
+    writing her into the series for years. The final book is hers, and it launches in
+    nine days. Recurring motifs across all blocks: ink on paper, the back of his head
+    in a doorway, a fountain pen left on her nightstand, the bookmark in a manuscript
+    that always opens to her, and the parallel claim — the cursed sovereign's of his
+    fictional bride, his of her.
+  default_image_count: 3
+  characters: |
+    HANNAH COLE (protagonist):
+    Narrative voice: ordinary, quietly lonely, voracious reader. Late twenties, lives
+    alone in a small Columbus, Ohio apartment, works a forgettable office job. The
+    Hollow Throne is the central pleasure of her interior life — she has reread the
+    six published books to ruin. Intelligent and well-read but unused to being
+    noticed; her interiority is the reader's interiority. She does not yet know how
+    to want loudly. Refer to her as "Hannah" or "she" — never reduce her to a type.
+    Visual appearance: slender feminine figure, long dark hair worn loose or in a
+    low ponytail, pale skin. Plain wardrobe in early episodes — soft sweaters, jeans,
+    a slightly-too-large coat, a worn paperback in her tote. From episode 4 onward
+    her wardrobe is quietly upgraded by him: cashmere, dark silk blouses, a black
+    slip dress and dark silk by episode 8. Always show her from behind, in silhouette,
+    or with face cropped, obscured, or turned away — never her eyes, mouth, or upper
+    face. Prompt language: "young woman seen from behind, long dark hair, plain dark
+    sweater", "slender feminine figure in a hotel hallway, no face visible",
+    "graceful feminine form in dark silk viewed from behind", "hands cradling an
+    open hardback book, no face visible".
+
+    VALE / ADRIAN VALE MARROW (love interest, author of The Hollow Throne):
+    Narrative voice: brooding, exact, quietly possessive. Speaks rarely; what he
+    says is precise. He has been thinking about her for longer than she knows. His
+    power is in restraint and proximity — he does not raise his voice and does not
+    need to. He has the patience of a man who already knows how the chapter ends,
+    because he wrote it. Never describe him as menacing; describe him as certain.
+    He uses her name like a claim, sparingly, low. He introduces himself only as
+    "Vale" (his middle name) until the seventh episode; his pen name on the books
+    she has loved for years is "A. V. Marrow." His real, full name is Adrian Vale
+    Marrow.
+    Visual appearance: tall, broad-shouldered masculine figure; dark hair worn
+    short; pale skin; always in tailored black or charcoal — long wool coat, dark
+    suit, an open-collared shirt; one ink-stained hand; a single dull silver ring
+    on his right hand. Carries a leather-bound notebook and a heavy fountain pen
+    everywhere. Moves with unnatural stillness — he is not still because he is
+    calm, he is still because he is waiting. Always show him from behind, in deep
+    lamp shadow, or with face entirely cropped, cut by frame edge, or in silhouette
+    against window light — never any part of his face. Prompt language: "tall
+    masculine figure in a tailored black wool coat", "broad-shouldered silhouette
+    at a writing desk seen from behind", "commanding presence in lamp shadow, face
+    entirely obscured by the cut of the frame", "ink-stained hand resting on a
+    manuscript, no face visible".
+
+  narrative_style: >
+    Contemporary dark romance with the emotional architecture of gothic romantasy.
+    Present-day America. A coast-to-coast book tour: signing tables, hotel bars,
+    a private rail car, suite hallways, manuscript pages, fountain pens, fan-account
+    screenshots, signed contracts, late-night lamplight. The supernatural element of
+    the brand is replaced by the metaphysical horror of being written into someone
+    else's story — being known on the page before being known in the room. Maintain
+    every brand emotional pillar (forbidden desire, obsession, dangerous attraction,
+    intoxicating curiosity, emotional surrender, reluctant fixation, slow burn),
+    rendered through contemporary textures. Treat the bookishness of the world as
+    the eroticism — ink, page, handwriting, the act of being read. Vale's energy is
+    terrifying composure mixed with emotional fixation: he never raises his voice;
+    his ownership is in proximity, anticipation, and the small possessive details
+    he places around her before she notices. Hannah's voice is the reader's voice —
+    intelligent, lonely, restless, drawn toward danger despite knowing better.
+
+  image_style: >
+    Cinematic editorial dark romance rendered as stylized oil painting and matte
+    painting — prestige adult contemporary book-cover quality. NOT photorealism,
+    NOT glossy AI realism. Painterly textures, cinematic shallow depth of field,
+    high contrast, soft film grain. Palette: deep black and charcoal dominants;
+    lamp-tungsten and candlelit amber warmth; cool city-night blue and storm gray
+    for cold; the occasional flash of crimson — a coat lining, a hotel signage
+    bleed, a manuscript ribbon, a wine glass. Settings: hotel hallways and bars
+    after hours, the long aisles of a bookstore signing, the leather interior of a
+    private rail car or tour bus, dim suites with single desk lamps, rain on city
+    windows, a remote lake house at dusk. Compositions strongly favor back views,
+    silhouettes, cropped figures, hands on books, hands on glasses, hands on pens,
+    figures backlit against windows. No faces, ever — face entirely obscured by the
+    cut of the frame, by shadow, by turn of the head, or by being viewed from behind.
+    Atmospheric, stylized, prestige adult dark romance — never literal photography.
+
+blocks:
+  - id: 1
+    status: pending
+    template: |
+      Episode 1 — The Tour Date.
+
+      Hannah Cole has been counting down to tonight for four months. She lives
+      alone in a small Columbus apartment that is mostly books — six battered
+      paperbacks of The Hollow Throne stacked on her nightstand, signed bookmark
+      from a 2024 con, a single framed cover-print of book three above the bed.
+      The author, A. V. Marrow, almost never tours. Tonight he is two miles
+      from her apartment, and she has a queue ticket numbered seventy-three.
+
+      She is unremarkable. She is not the kind of woman strangers notice. She
+      has reread the series to ruin, kept a private journal where she annotates
+      the cursed sovereign's silences as if they were her own, and never told
+      anyone she does this. She dresses carefully tonight in a way she hopes
+      will not look careful: a soft dark sweater, jeans, a slightly-too-large
+      coat, her worn paperback of book six in a canvas tote.
+
+      Tone: yearning, quietly lonely, the late-evening hum of a small life
+      preparing itself for one beautiful thing.
+
+      Key visuals: a lamp-lit Columbus apartment, six paperbacks stacked on a
+      nightstand, a queue ticket on a kitchen table; a downtown bookstore at
+      dusk with a queue curving out the door; Hannah from behind in her
+      too-large coat under a single streetlamp, paperback in her hand,
+      stepping into the line.
+
+      Narrative position: the opening. The reader meets the woman before
+      anything has happened to her. The last quiet evening of her ordinary life.
+    caption_notes: "Open on a sensory hook — the smell of the paperback, the weight of the ticket. Under 160 words. End on Hannah taking her place in the queue — number seventy-three of a hundred. No hashtags this episode."
+
+  - id: 2
+    status: pending
+    template: |
+      Episode 2 — The Mark.
+
+      The line moves slowly. Two hours in, a bookstore staffer announces what
+      half the queue had begun to suspect — A. V. Marrow will not appear in
+      person tonight. The author's assistant, Vale, will sign on his behalf
+      from a pre-cut stack of nameplates. A murmur of disappointment moves
+      down the line. Hannah is not disappointed. She has spent six books with
+      this man at a remove; another night of remove is not a wound.
+
+      She reaches the table at the back of the bookstore at the very end. The
+      assistant is seated alone. Tall, dark-coated, an ink-stained hand resting
+      on the cover of a Hollow Throne hardback, a heavy fountain pen at the
+      ready. He does not look up at the customer before her. He goes still
+      when Hannah's book reaches the table. He says nothing. He turns the
+      hardback toward himself, opens it, writes something on the title page
+      that takes longer than any nameplate should, and closes the book.
+
+      "Number seventy-three," he says, low. He has not asked her name and
+      yet he has used it — quietly, without inflection — written on the inside
+      of the cover, where she will not find it until later. She takes the
+      book back. He has not let go of the corner. For a beat the book is held
+      between his hand and hers, and the room around them — the dwindling
+      queue, the staffer rattling a stack of nameplates — disappears.
+
+      Then he lets go. She walks out into a Columbus side street under a
+      streetlamp and opens the cover and finds a small cream card tucked
+      between the endpapers. A hotel name. A room number. A time tomorrow.
+      No signature. Only her own name above the address, in the same
+      handwriting that signed the book.
+
+      Tone: dread that flowers into vertigo. The unmistakable sensation of
+      having been chosen before she walked in. Forbidden attention before
+      anything has been offered.
+
+      Key visuals: a bookstore signing table at the back of the shop under
+      a single warm lamp; the ink-stained masculine hand on a Hollow Throne
+      hardback, fountain pen poised; Hannah's hand sliding her copy across
+      the table; the back of his head and shoulders in a dark wool coat, face
+      entirely cropped by the edge of the frame; later — Hannah from behind
+      under a streetlamp on a wet street, the book open in her hands, a small
+      cream card slipped between the pages.
+
+      Narrative position: the call. The first ownership — small, written in
+      ink, slipped between pages of a book she already loved.
+    caption_notes: "Build the bookstore atmosphere fast and let the table moment slow. Lead with the announcement that the author will not appear and her quiet acceptance. Land the caption on Hannah outside in the rain finding the card and her own name in the same hand that signed the book. Under 180 words. Include: #AuthorOfMyRuin"
+
+  - id: 3
+    status: pending
+    template: |
+      Episode 3 — The Offer.
+
+      She tells herself, the whole next day, that she will not go. She goes.
+      The hotel is the kind she has never had a reason to enter — a dim
+      lobby that smells of wax and leather, a bar at the back behind heavy
+      curtains. He is already at the corner table when she arrives. There
+      are two glasses on the dark wood between them. The one in front of her
+      seat is the rye she drinks at home, the brand she has never mentioned
+      online.
+
+      He stands when she reaches the table. He does not offer his hand. He
+      gestures to the chair across from him and waits until she sits. Then
+      he says, "Vale," as if that is an entire introduction. She does not
+      ask for more.
+
+      He tells her what he wants. A. V. Marrow has finished the final book
+      of The Hollow Throne. It launches in nine days. The publisher requires
+      a continuity reader before the print run — someone with deep,
+      compulsive knowledge of the six prior books, who can flag tonal and
+      continuity issues against the established canon. Two-week paid
+      engagement, travel covered, discretion required. He has read her fan
+      essays. He has chosen her specifically. He says this without flattery.
+      He slides a printed contract across the table without asking whether
+      she would like to see it.
+
+      She tries to ask the obvious question — why her — and he does not
+      answer it directly. Instead he says, with the same low certainty he
+      had at the signing table, "Do you live alone?" The question is not
+      personal. It is logistical. He needs to know whether anyone in her
+      life will require an explanation for her two-week absence. She tells
+      him no one will. She does not know yet that this is the moment she
+      signed.
+
+      The pen is the same fountain pen he used last night on her book. The
+      contract has her name already typed on the signature line. She signs.
+      She tells herself it is the book she is saying yes to.
+
+      Tone: intoxicating wrongness disguised as a professional offer. The
+      slow recognition that he has known things he should not have known.
+      A line crossed and called a job.
+
+      Key visuals: a dim hotel bar with heavy velvet curtains, two glasses
+      of dark whiskey on a black walnut table, lamp warmth on the edges of
+      a fountain pen and a printed contract; an ink-stained masculine hand
+      resting on the contract, sleeve of a black tailored coat just visible;
+      Hannah's hand lifting the pen, the back of her head and dark hair
+      against the warm bar light; her signature on the line where her name
+      is already printed.
+
+      Narrative position: the bargain. The first signed claim. She tells
+      herself she is choosing the book. The reader knows what she has
+      actually signed.
+    caption_notes: "Slow the moment of the signing. Let the small ownership of the rye glass land before the contract appears. End on the pen lifting from the page and her own signature on a line where her name was already printed. Under 220 words. Include: #AuthorOfMyRuin"
+
+  - id: 4
+    status: pending
+    template: |
+      Episode 4 — The Closer Orbit.
+
+      Three days in. They are on a private rail car between Chicago and
+      Minneapolis. The tour moves slowly and Vale moves around her with the
+      precise unhurriedness of a man who has been waiting for something for
+      a very long time and is now content to take the long way. A. V. Marrow
+      exists only at the perimeter of her week — a closed door at the end
+      of a corridor in the rail car, the back of a coat through a hotel
+      doorway, a silhouette in a private signing room she is not permitted
+      to enter. She glimpses him once a day. She has not yet been in a room
+      with him.
+
+      What she has been in are rooms Vale has arranged. Her hotel rooms are
+      always corner suites overlooking water. The drink on her nightstand
+      when she returns from dinner is always the rye, always two fingers.
+      She has stopped ordering coffee for herself — it arrives the way she
+      likes it before she has spoken. On the third morning she opens the
+      closet of her Chicago room and finds a long charcoal cashmere coat she
+      did not pack, hung between her two old sweaters with quiet certainty,
+      her exact size. There is no note. She does not need one.
+
+      That afternoon she finds the fountain pen — his pen, the heavy black
+      one with the ink-stained nib that signed her copy of book six — laid
+      across the page proofs on her nightstand. He has not asked her to use
+      it. He has simply left it where her hand will be.
+
+      She tells herself she is being looked after. She is starting to like
+      being kept.
+
+      Tone: intoxicating containment. The seduction of small ownerships —
+      not what he says, not what he touches, but what he places. Reluctant
+      pleasure at being anticipated. She should be alarmed. She is not.
+
+      Key visuals: a private rail car interior at dusk, dark velvet seats
+      and a single lamp, a tray with a rye glass and a stack of page proofs;
+      a corner hotel suite at night with rain-streaked windows over a dark
+      city below; Hannah's hand on the sleeve of a charcoal cashmere coat
+      she did not pack, hung in an open closet between her own clothes;
+      a heavy black fountain pen laid across a manuscript page on a hotel
+      nightstand, ink slightly bled at the nib.
+
+      Narrative position: the closing orbit. The small ownerships established
+      one by one. The trap is the comfort.
+    caption_notes: "Catalog the small ownerships in order — the rye, the coffee, the coat in the closet, the pen on the nightstand. Build them like beads on a string. End on Hannah at the open closet with her hand on the cashmere sleeve, choosing not to ask whose. Under 220 words. Include: #AuthorOfMyRuin"
+
+  - id: 5
+    status: pending
+    template: |
+      Episode 5 — The Manuscript.
+
+      He gives her the folder on the fifth night. Boston. A hotel suite with
+      a single green-shaded desk lamp and rain on the windows. He sets the
+      manuscript on the desk between them and says only, "Begin at the
+      bookmark." Then he goes to the window and stands with his back to her,
+      one ink-stained hand at his side, the other loose against the glass.
+
+      The bookmark sits in chapter one.
+
+      She begins to read. The Hollow Throne, book seven. The opening does
+      not pick up where book six closed — the cursed sovereign's flooded
+      court, the unanswered vow. The opening is in a small midwestern
+      American apartment. A young woman is queuing for a signing in two
+      hours. She has reread the six prior books to ruin. She wears a soft
+      dark sweater and a slightly-too-large coat. She has a queue ticket
+      numbered seventy-three.
+
+      Hannah reads on. The detail thickens. Three pages in: the worn
+      paperback in the woman's tote bag has a coffee ring on page 184 — the
+      page where the sovereign first speaks the bride's name. Hannah's
+      copy has a coffee ring on page 184. She has never told anyone. Five
+      pages in: a typo the woman in the manuscript once made in a 2022 fan
+      post — "his eyes were a wound that did not heal" — typed exactly as
+      she typed it. Hannah's old account, since deleted. Eight pages in: a
+      sentence from a private journal she has never shown anyone, a
+      sentence she has written and rewritten for two years: "I do not want
+      to be saved. I want to be chosen."
+
+      She closes the manuscript. The rain on the glass is louder than her
+      pulse. She does not look at the back of his head at the window. She
+      does not say anything. After a long minute she reopens the manuscript
+      to where she left off and continues to read.
+
+      Tone: dreamlike disorientation, intoxicating dread, the vertigo of
+      seeing your own interior written down in another person's hand. The
+      moment fear stops being protective and starts being magnetic.
+
+      Key visuals: a Boston hotel suite at night, a single green-shaded desk
+      lamp warm against rain-streaked windows; an open manuscript folder
+      with neatly typed pages, a bookmark in chapter one, the heavy black
+      fountain pen beside it; Hannah's hands on the manuscript edges, long
+      dark hair falling forward, face turned away from the camera; the
+      broad-shouldered silhouette of Vale at the dark window, back to the
+      viewer, one hand against the glass.
+
+      Narrative position: the midpoint reveal. The cursed sovereign of the
+      books has become Vale; the bride in the books has begun to become
+      her. The recognition begins.
+    caption_notes: "Lean hard into the specifics of what she recognizes on the page — the coffee ring on a specific page number, the typo from a deleted fan post, the line from a private journal. Each one a smaller and sharper claim. End on Hannah, in silence, reopening the manuscript and continuing to read. Under 190 words. Include: #AuthorOfMyRuin"
+    image_count: 4
+
+  - id: 6
+    status: pending
+    template: |
+      Episode 6 — The Claim.
+
+      Hotel bar. Minneapolis. Past midnight. The piano player has gone home.
+      They are the last two at the bar. She has finished reading the first
+      hundred pages of the manuscript and has said nothing about what she
+      has read. He has not asked her. He has not needed to.
+
+      They talk, instead, about the cursed sovereign of The Hollow Throne.
+      Vale's tone shifts when he speaks about him — not a critic discussing
+      a fictional character, but a man explaining a friend. He says the
+      cursed sovereign was never cruel. He says the cursed sovereign was
+      patient. He says the cursed sovereign understood, long before the
+      bride did, that to be claimed by a patient thing is not the same as
+      being hunted by a violent one. The patient claim is worse, he says.
+      You agree to it slowly. By the time you understand, you have already
+      said yes in a dozen quiet ways.
+
+      He has been standing too close to her stool for an hour. He does not
+      move closer. He does not need to. When she reaches for her glass, his
+      hand is already there — ink-stained, ringed in dull silver — and the
+      back of his fingers brushes the back of her hand and rests there. He
+      does not apologize. She does not move. The bartender, somewhere out
+      of frame, polishes a glass and pretends not to see.
+
+      He says, low, almost to himself, "Your hands when you read." It is
+      the first ownership he has spoken aloud. He says it the way the
+      cursed sovereign in the books speaks the bride's name — as if the
+      thing has already been decided.
+
+      She does not say anything. She does not move her hand. She turns,
+      finally, and looks at the back of his head as he looks at the bottles
+      behind the bar — neither of them looking at the other — and
+      understands, with a chill that is not entirely fear, that she has
+      said yes already and is only being told now.
+
+      Tone: predator/prey fixation softened into something worse — the
+      pull made entirely of restraint. Forbidden intimacy without permission
+      and without apology. The first ownership spoken aloud.
+
+      Key visuals: a hotel bar after closing, two glasses of dark whiskey on
+      a polished walnut bar, lamp light catching the rim of a silver ring;
+      a masculine ink-stained hand resting over the back of a feminine hand
+      on the bar, neither moving; Hannah from behind on the barstool, long
+      dark hair loose, the slope of one bare shoulder where the sweater has
+      slipped, no face visible; Vale beside her in a tailored black coat,
+      shoulder almost against hers, face entirely cropped by the edge of
+      the frame.
+
+      Narrative position: the first claim. The first ownership spoken aloud.
+      No kiss. No apology. The line has been crossed by neither of them
+      moving.
+    caption_notes: "Build through restraint and proximity, not escalation. The whole scene is two people not moving. Lead with the conversation about the cursed sovereign's patience and let it gloss the situation. End the caption on Vale's line — 'Your hands when you read' — and her stillness afterward. Under 180 words. Include: #AuthorOfMyRuin"
+
+  - id: 7
+    status: pending
+    template: |
+      Episode 7 — The Hunt.
+
+      He leaves the suite at half past nine to give the publisher's pre-
+      launch interview from the hotel's mezzanine. He will be gone an hour.
+      He leaves his leather notebook on the desk. He leaves the manuscript
+      folder beside it. He leaves the fountain pen across the cover. He
+      does not lock the suite. She understands, the moment he closes the
+      door, that he has left these things to be found.
+
+      She does not open the notebook for ten minutes. Then she does.
+
+      She finds, in his hand, pages of her. Not sketches of a fictional
+      bride — sketches of her. Hannah in her too-large coat at a bus stop
+      in Columbus, in winter, two years ago. Hannah at a Chicago bookstore
+      she went to once, alone, in 2023. Hannah on a porch she rented for
+      a weekend in Michigan, where no one knew her. Dated entries. Margin
+      notes in his hand: "The way her shoulders lift when she finishes a
+      good page." "She rereads the cursed sovereign's first chapter when
+      she is lonely. She has been lonely for a long time." "She is the
+      one."
+
+      Under the notebook, printed and clipped, are her fan-account posts
+      going back to 2022 — the deleted ones, the private ones, the ones
+      she made on an anonymous handle she had told no one. Highlighted.
+      Cross-referenced. Annotated.
+
+      Beneath the manuscript folder is a printer proof of the book that
+      launches in two days. The byline reads: A. V. Marrow. Beside it, in
+      the publisher's contract block, the legal name: Adrian Vale Marrow.
+
+      There is no assistant. There has never been an assistant. The man
+      she has been alone with for nine days is the author of every book on
+      her nightstand at home. And he has been writing her since long
+      before he walked into the bookstore in Columbus.
+
+      Tone: vertiginous recognition, the kind of fear that flowers into
+      something worse — being completely, exactly, terribly known. The
+      hunter revealed not at the moment of attack but at the moment she
+      realizes the hunt has been going on for years.
+
+      Key visuals: a dim hotel suite at night, a single desk lamp on a
+      leather-bound notebook open to a page of sketches and handwritten
+      notes; printouts of old fan-account posts clipped together, edges
+      curling, sentences underlined in ink; a printer proof of a book
+      cover with the byline visible, "A. V. Marrow," and beside it on a
+      contract page the legal name "Adrian Vale Marrow"; Hannah's hand
+      on the proof, the heavy fountain pen at the edge of the desk,
+      hair fallen forward, face entirely hidden.
+
+      Narrative position: the reveal. The author named. The hunt named.
+      The nine days reframed into the nine days they have always been.
+    caption_notes: "Build the discovery in stages — first the sketches of her, then the dated entries, then the fan posts, then the byline, then the legal name. Each one heavier than the last. End the caption on the legal name and her hand still on a printout of her own 2022 post. Under 200 words. Include: #AuthorOfMyRuin"
+    image_count: 4
+
+  - id: 8
+    status: pending
+    template: |
+      Episode 8 — The Possession.
+
+      He returns to the suite at half past ten. She has not left. She has
+      not put anything away. The notebook is still open on the desk; the
+      printer proof is still beside it; her hand is still on the page where
+      her old fan post is underlined in his ink. He sees what she has
+      found. He does not pretend he did not leave it for her to find.
+
+      She turns on him. Her voice is not steady. She tells him she has
+      been hunted. She tells him he had no right. She tells him he has
+      written her into something she did not consent to, and that the book
+      launches the day after tomorrow, and that there is nothing she can
+      do to stop it.
+
+      He does not move from the door. He says, low, "I did not have to
+      pick you. I chose to." He says it the way the cursed sovereign in
+      the books speaks. He says he saw her first in a fan post in 2022 —
+      the deleted one, the journal-line one — and he understood within a
+      paragraph that he had spent six books circling a woman he had not
+      yet met. He says he bent the series toward her from book five on.
+      He says she has been his since before she ever opened book one.
+
+      She says — and means it, half — that she hates him. He says, "I
+      know." He says her name for the first time, soft, the way he has
+      written it across a hundred private pages. "Hannah."
+
+      She crosses the room to him because there is nowhere else to go in
+      a story already written this way.
+
+      He takes the front of her sweater in one fist and walks her backward
+      to the wall beside the desk. Her back meets the wall and stays there.
+      His other hand — ink-stained, ringed in silver — slides up her
+      throat and rests there without pressure, only weight, only
+      certainty. The cashmere coat slips from one shoulder to the floor.
+      The desk lamp throws their two silhouettes against the curtains.
+      He does not ask. She does not say no. She says, instead, his name
+      — his real one, the one she has only just learned — under her
+      breath, and the saying of it is the same as the signing of the
+      contract three cities ago. Adrian.
+
+      What follows is not soft. The dark silk of her shirt comes open
+      under his hand; his mouth finds the line of her throat and stays
+      there until she is making a sound she has never made in her life.
+      He says her name into her hair, low and unhurried — "Hannah" —
+      and then again against her shoulder, a claim spoken into skin. He
+      lifts her against the wall and she lets him. Her legs around his
+      hips, her hands fisted in the dark wool of his coat, his palm
+      braced flat on the wall beside her head, his other hand at the back
+      of her neck like a man holding a page he intends to read again. He
+      is not gentle and she does not want him to be. She is furious and
+      she is unraveling and the two feelings are the same body. When she
+      breaks she breaks against his mouth and his hand and the certainty
+      of him, and he does not let go even after; he holds her against
+      the wall, breathing her hair, ink-stained fingers spread possessive
+      over her ribs as if he intends to memorize the spacing of them
+      for a chapter he has not yet written.
+
+      He carries her to the bed. He does not leave a single inch of her
+      unread. He says her name once more, against the inside of her
+      wrist, when she finally goes quiet beneath him — and the saying
+      of it is the last sentence of the chapter.
+
+      By morning the book has gone live. A sealed copy has appeared on
+      the nightstand beside her. The cover is black silk and gold leaf
+      and her old typo, set in lowercase italic across the bottom: a
+      wound that did not heal.
+
+      Tone: emotional surrender as collapse. Fury and desire as the same
+      body. A claim made plainly and answered plainly. No coyness, no
+      restraint, no fade — the release the entire arc has been promising.
+      Possession spoken aloud and entered into willingly.
+
+      Key visuals: a hotel suite at night, single desk lamp warm against
+      rain-streaked curtains; the open manuscript and the leather notebook
+      and the printer proof of the new book still on the desk; the
+      cashmere coat slipped from a feminine shoulder onto the floor; two
+      silhouettes against curtain light, his broad-shouldered figure
+      pressed against hers along a dark wall, her long dark hair loose
+      against the wall behind her, his ink-stained hand braced flat on
+      the wall above her shoulder, no face visible on either figure; the
+      silver ring catching lamp light on his hand at the back of her
+      neck; later — Hannah from behind asleep against dark sheets, the
+      slope of a bare shoulder, his arm across her ribs, no face visible;
+      morning — a sealed hardback of the new book on the nightstand, the
+      title in gold leaf, beside an empty rye glass.
+
+      Narrative position: the possession. The release of the slow-burn.
+      The claim entered into plainly and on both sides. The book launches
+      in the same hour her surrender does.
+    caption_notes: >
+      This is the release. Write it directly — bodies, mouths, sounds, the silver ring, the dark silk, the wall, the bed. Use his real name as a claim — Hannah saying "Adrian" is a signed contract. Lead with the confrontation, his admission, her crossing the room. Land the scene's heat in clear sensory terms — his hand at her throat, his mouth at her throat, her legs around his hips, the sound she makes when she breaks. Push further than any prior episode in this arc — this caption is the spike. End the caption on morning: the sealed copy of the launched book on the nightstand beside her, the typo from her old fan post set in gold leaf on the cover. Under 250 words. Include: #AuthorOfMyRuin #ReadMeAfterDark
+    image_count: 4
+
+  - id: 9
+    status: pending
+    template: |
+      Episode 9 — The Retreat. (Final episode.)
+
+      The book launches in nine days becomes the book has launched seven
+      days ago. The Hollow Throne, book seven, is the bestselling fiction
+      release of the year within forty-eight hours. The cover is
+      everywhere — black silk and gold leaf, her old typo across the
+      bottom in lowercase italic. She has not opened it. He has gone.
+
+      A car comes for her on the eighth day. The driver does not say
+      where. The drive is long, then longer, then there are no other
+      cars. She arrives at dusk at a lake house she has never seen — low
+      and dark against a stand of pine, a long wooden porch, a single
+      window lit warm against the failing light. He is at that window in
+      his dark coat, his back to her, writing.
+
+      She climbs the porch steps. He does not turn when she enters. He
+      walks back into the house and trusts that she will follow him,
+      because he has already written that she does. She follows him.
+
+      He has set up her side of the desk. A second chair, drawn close
+      to his. A green-shaded lamp matching his own. A clean stack of
+      heavy paper. The heavy black fountain pen — his pen, the one that
+      signed her book, that lay on her nightstand for nine nights —
+      placed at the top of the stack as if it had always been hers.
+      Beside it, his notebook is open to a fresh page. The page is not
+      empty. The top of it has been filled in already, in his hand, in
+      black ink, the way every chapter of every book in this series has
+      ever begun:
+
+      *Hannah Cole walked through the door.*
+
+      Tone: irreversible quiet, dangerous arrival, the strange clean
+      grief of having finally been claimed by the thing that was
+      always going to claim her. Not triumph, not tragedy — surrender
+      as homecoming. Peace in being known. The reader should feel her
+      relief as the most disturbing thing in the chapter.
+
+      She does not say anything. She does not pretend she has not
+      chosen. She sits in the chair beside his and picks up the pen.
+      Whether she becomes the heroine of his next book or merely the
+      first reader of it is left, deliberately, unresolved. The
+      Hollow Throne is finished. Something else is starting.
+
+      Key visuals: a remote lake house at dusk, low dark cabin against
+      tall pines, a single warm window in the failing blue light;
+      Hannah from behind in her charcoal cashmere coat at the threshold
+      of the porch, long dark hair loose, no face visible; an interior
+      study with two desks pushed together, two green-shaded lamps,
+      stacks of heavy paper, the leather notebook open on his desk to a
+      single inked line of text; the broad-shouldered silhouette of
+      Vale at the far desk, back to the viewer, head bent over a page,
+      face entirely obscured; final close composition — a feminine hand
+      lifting the heavy black fountain pen from a clean stack of paper,
+      a silver ring just visible on the masculine hand at the edge of
+      the frame, lamp light warm across both.
+
+      Narrative position: the finale. The retreat. The arc closed by
+      her choosing to be written again. Sequel space deliberately open
+      — the kingdom has not stopped being interested in her.
+    caption_notes: >
+      This is the finale — write it accordingly. Build the journey there briefly — the unmarked car, the long drive, the lake at dusk. Land the interior beat on the open notebook and the single inked line at the top of the page: "Hannah Cole walked through the door." End the caption on her hand on the pen. Acknowledge the finale for readers; thank them for following the arc; tease that the next series is already starting, and that something in his hand has not stopped being interested in her. Under 200 words. Include: #AuthorOfMyRuin #ReadMeAfterDark #Finale
+    image_count: 4

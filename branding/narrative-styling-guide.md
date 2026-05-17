@@ -73,7 +73,7 @@ Primary audience:
 The content should feel:
 
 * sophisticated rather than juvenile
-* seductive rather than explicit
+* seductive by default, with occasional explicit peaks earned through buildup — see **Sexual Content and Heat Level**
 * emotionally rich rather than mechanically plot-driven
 * immersive rather than action-focused
 
@@ -151,6 +151,67 @@ The romance should feel:
 
 Avoid healthy/comfortable romance dynamics early in arcs.
 Tension is essential.
+
+---
+
+# Sexual Content and Heat Level
+
+## Default register
+
+Default to the brand's seductive register — tension over release, implication
+over description, slow burn over constant action. The majority of scenes
+across the majority of episodes should hold restraint. Forbidden longing
+performs better than gratification while readers are inside the build.
+
+## When explicit becomes earned
+
+Stories may reach occasional peak moments where the slow burn breaks and the
+release is rendered directly — bodies, mouths, sounds, skin, the physical
+and physiological reality of sexual release and its aftermath. These moments
+are not the default register. They are earned by the accumulated restraint
+of every episode that came before. A typical multi-block arc may contain
+zero, one, or at most two such peaks — never every episode or as a
+substitute for emotional escalation, usually not within the first half of an arc.
+
+When an arc reaches such a peak, write it accordingly:
+
+* Render the encounter in direct sensory terms — body, mouth, sound, skin,
+  weight, pressure, friction, breath, the spoken name
+* Honor the physical and physiological reality — what the body does, how
+  it responds, the texture of release, the aftermath in the body afterward
+* Maintain emotional weight throughout — every act is also a claim, a
+  surrender, a recognition; never mechanically described, never clinical
+* Keep the diction elegant — long, lyric, sensorily layered, prestige adult
+  contemporary; the same register as the rest of the arc
+* Use the love interest's name (or the protagonist's) as part of the act
+  itself — the saying of the name is the signing of the contract
+* Let the encounter take time and space on the page — do not rush it, do
+  not summarize it, do not cut away at the threshold
+
+## Hard limits even at peak
+
+* No crude vocabulary — keep diction prestige adult, never
+  gutter, never internet
+* No release that does not serve the obsession, the surrender, the claim —
+  if a peak does not deepen the romantic dynamic, it does not belong in
+  the arc
+
+## Narrative versus image divergence
+
+Narrative prose is more permissive than image generation. The captions
+posted to the page may, at earned peak moments, contain direct sexual
+content; the carousel images accompanying those same posts must continue to
+obey the strict rules in `image-styling-guide.md` — no faces, no genitalia,
+no nipples, no anatomically explicit framing. The heat lives in the prose;
+the images hold restraint. This contrast is intentional brand calibration.
+
+## Where to direct heat in a story file
+
+The default behavior on any block without explicit direction is restrained.
+To unlock a peak moment, that block's `caption_notes` should explicitly
+authorize direct sexual language for the caption of that block only. Without
+such direction, the LLM should default to the seductive register described
+above.
 
 ---
 
@@ -346,6 +407,24 @@ Scenes should generally feel:
 
 # Caption Style
 
+## Caption Length
+
+Default caption length is **180–240 words per block**. This is the baseline
+target when a block's `caption_notes` does not specify otherwise. Per-block
+`caption_notes` that prescribe a different length (e.g., "Under 110 words",
+"Under 300 words") override this default for that block.
+
+Use this range for the majority of episodes. Arc openers and quieter closing
+beats may run slightly shorter for tonal effect; peak release moments may
+run slightly longer when the scene demands it. The chosen length must serve
+the emotional arc of the block, not the other way around.
+
+At 180–240 words, captions are long-form by social-feed standards — readers
+must tap "See more" to read the full post. The opening sentences must carry
+enough hook to earn that expansion.
+
+## Caption Qualities
+
 Captions should:
 
 * feel emotionally addictive
@@ -353,7 +432,7 @@ Captions should:
 * end with hooks or unresolved tension
 * maintain narrative momentum
 * prioritize emotion over exposition
-* be concise enough for social scrolling
+* reward the reader who chose to expand the post
 * contain strong sensory/emotional phrasing
 
 Strong endings include:

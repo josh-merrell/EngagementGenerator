@@ -93,7 +93,7 @@ Use a numeric prefix to control posting order — stories are processed oldest-f
 | `id` | Yes | Sequential integer. Must be unique within the story. |
 | `status` | No | `pending` (default if omitted). Set to `complete` by the Lambda. |
 | `template` | Yes | Your episode outline. Consumed by the LLM to generate caption + image prompts. |
-| `caption_notes` | No | Per-episode caption instructions: tone, word count, hashtags, hooks. |
+| `caption_notes` | No | Per-episode caption instructions: tone, word count override (brand default is 180–240 words — see `branding/narrative-styling-guide.md`), hashtags, hooks. |
 | `image_count` | No | Override `default_image_count` for this block. |
 
 > **Image style is set at the story level, not per block.** This ensures visual continuity across all episodes in the arc. If a story has no `image_style`, the brand default from `branding/image-styling-guide.md` applies.
@@ -209,8 +209,13 @@ template: |
 ### `caption_notes`
 
 ```yaml
-caption_notes: "Keep under 120 words. Use a cliffhanger ending. Include: #SerialFiction #MayaAndVoss"
+caption_notes: "Use a cliffhanger ending. Include: #SerialFiction #MayaAndVoss"
 ```
+
+> **Caption length default is 180–240 words** (see `branding/narrative-styling-guide.md`).
+> Only specify a length in `caption_notes` when you want to deliberately deviate — e.g.,
+> `"Under 110 words"` for a quiet arc opener, `"Under 300 words"` for a peak release moment.
+> If no length is specified, the brand default applies.
 
 ### `image_count`
 

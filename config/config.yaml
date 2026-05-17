@@ -2,9 +2,8 @@
 # Apply changes by running: python3 scripts/import-config.py
 
 llm:
-  model: gpt-4o             # OpenAI model to use for caption + image prompt generation
-  temperature: 0.8          # Creativity (0.0 = deterministic, 1.0 = very creative)
-  max_tokens: 1000          # Max response length
+  model: gpt-5.5             # OpenAI model to use for caption + image prompt generation
+  max_tokens: 3500          # Max response length (entire JSON: caption + image_prompts). NOT a per-caption target — see caption_notes for that.
 
 images:
   model: gemini-3.1-flash-image-preview  # Gemini image generation model
